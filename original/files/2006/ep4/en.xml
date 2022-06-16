@@ -1,0 +1,39 @@
+﻿<!--
+Intro episode 03
+time : time between each slide
+soundOffset : time between each sound
+-->
+<intro time="1" soundOffset="9">
+	<!-- -->
+	<slide>
+		<!--  -->
+		<text time="5">
+The Piraka’s disagreements escalate
+into open war
+		</text>
+		<text time="4">
+as they journey through the caves
+in search of the Mask of Life.
+		</text>
+	</slide>
+	<slide>
+		<text time="3">
+Traps of ice and fire wait for them,
+and all the while...	
+		</text>
+	</slide>
+	<slide>
+		<text time="4">
+they journey without knowing
+that the Matoran resistance
+prepared for their arrival.
+		</text>
+	</slide>
+	<slide>
+		<text time="5">
+Alarm devices built into the caverns
+are warning the Toa Inika
+that the Piraka are on the march!
+		</text>
+	</slide>
+</intro>

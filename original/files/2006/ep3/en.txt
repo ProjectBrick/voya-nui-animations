@@ -1,0 +1,9 @@
+﻿&loading=Loading&
+&skipintro=Skip&
+&skip=skip&
+&retry=retry&
+&controls=Controls:&
+&start=start&
+&game1_help=Use any key to jump and avoid the energy discharges.%0DThe most you keep the key pressed,%0Dthe higher you jump!&
+&game2_help=Alternate left/right keys as quick as possible%0Dto run faster!&
+&continue=To be continued...&

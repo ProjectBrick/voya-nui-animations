@@ -1,0 +1,10 @@
+﻿&loading=Loading&
+&skipintro=Skip&
+&skip=skip&
+&retry=retry&
+&controls=Controls:&
+&start=start&
+&game1_help=Catch all the Zamor crystals!%0DBe careful to not let any of them fall down!&
+&game2_help=Play Avak's favorite game: shot and destroy!%0DDestroy the moutain as quick as possible!&
+&continue=To be continued...&
+&playagain=Play again&

@@ -1,0 +1,55 @@
+﻿<!--
+Intro episode 02
+time : time between each slide
+soundOffset : time between each sound
+-->
+<intro time="1" soundOffset="9">
+	<!-- -->
+	<slide>
+		<!--  -->
+		<text time="5">
+The Piraka have seized control of Voya Nui,
+using their zamor spheres
+to enslave the Matoran
+living there.
+		</text>
+	</slide>
+	<slide>
+		<text time="4">
+Despite their best efforts,
+they have been unable to find
+the Mask of Life
+		</text>
+		<text time="4">
+although each has his own theory
+about where it might be.
+		</text>
+	</slide>
+	<slide>
+		<text time="7">
+Alliances are made and broken every day,
+as each Piraka competes with the others
+to get the mask while pretending
+to support the team.
+		</text>
+	</slide>
+	<slide>
+		<text time="3">
+The word “trust” is not
+in the Piraka vocabulary,
+		</text>
+		<text time="4">
+And that has never been
+more true than on Voya Nui.
+		</text>
+	</slide>
+	<slide>
+		<text time="5">
+Now Thok has discovered something interesting…
+		</text>
+		<text time="4">
+something he has no intention
+of sharing with his teammates.
+		</text>
+	</slide>
+</intro>

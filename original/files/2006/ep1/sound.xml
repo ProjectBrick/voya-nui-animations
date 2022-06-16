@@ -1,0 +1,13 @@
+<sounds genvol="100" fxvol="100" musicvol="100" >
+	<file id="main" hifi="sound.swf" lofi="">
+		<music>
+			<_coeur volume='100' />
+			<_seq03_boucle volume='100' />
+			<_seq03_introboucle volume='100' />
+			<_seq03_sortieboucle volume='100' />
+			<_seq5_premixpourboucle volume='100' />
+		</music>
+		<fx>
+		</fx>
+	</file>
+</sounds>

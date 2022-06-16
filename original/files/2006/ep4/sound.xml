@@ -1,0 +1,13 @@
+<sounds genvol="100" fxvol="100" musicvol="100" >
+	<file id="main" hifi="sound.swf" lofi="">
+		<music>
+			<_coeur volume='100' />
+			<_conclu_jeu_surf volume='75' />
+			<_jeu_surf volume='50' />
+			<_jeu2 volume='50' />
+			<_jeu2_win volume='75' />
+		</music>
+		<fx>
+		</fx>
+	</file>
+</sounds>

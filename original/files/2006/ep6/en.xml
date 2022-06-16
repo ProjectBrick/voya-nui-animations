@@ -1,0 +1,38 @@
+﻿<!--
+Intro episode 05
+time : time between each slide
+soundOffset : time between each sound
+-->
+<intro time="1" soundOffset="9">
+	<slide>
+		<text time="2">
+The Piraka are closing in on their prize
+		</text>
+		<text time="2">
+- the powerful Mask of Life -
+		</text>
+		<text time="5">
+and only the Toa Inika can hope to stop them!
+		</text>
+	</slide>
+	<slide>
+		<text time="6">
+When these two mighty teams clash,
+all of Voya Nui is shaken to its core.
+		</text>
+	</slide>
+	<slide>
+		<text time="6">
+But who will survive to go down the winding stairway
+that leads to the Chamber of Life?
+		</text>
+	</slide>
+	<slide>
+		<text time="3">
+One side will win ...
+		</text>
+		<text time="4">
+one side will fall!
+		</text>
+	</slide>
+</intro>

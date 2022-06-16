@@ -1,0 +1,18 @@
+<sounds genvol="100" fxvol="100" musicvol="100" >
+	<file id="main" hifi="sound.swf" lofi="">
+		<music>
+			<_coeur volume='100' />
+			<_game_fight volume='150' />
+			<_game_mix volume='100' />
+		</music>
+		<fx>
+			<_game_door volume='100' />
+			<_game_pira_dead volume='100' />
+			<_game_stepL volume='50' />
+			<_game_stepR volume='50' />
+			<_game_toa_gen volume='100' />
+			<_game_toa_dead volume='100' />
+			<_game_key volume='300' />
+		</fx>
+	</file>
+</sounds>

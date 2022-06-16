@@ -1,0 +1,17 @@
+﻿<!--
+time : time between each slide
+soundOffset : time between each sound
+-->
+<intro time="1" soundOffset="9">
+	<!-- -->
+	<slide>
+		<!--  -->
+		<text time="8"> Six cunning and brutal beings, the Piraka, traveled to the lair of Makuta in search of treasure or new technology. What they found was the shattered armor of the powerful villain, who had apparently died in battle.</text>
+	</slide>
+	<slide>
+		<text time="14"> Suddenly, all six were seized with an overpowering idea – to seek out the ancient Mask of Life on the island of Voya Nui and take it for themselves. Although some questioned the mysterious way they all decided on this at the same time, none doubted that the Kanohi Ignika would be the ultimate object of power.</text>
+	</slide>
+	<slide>
+		<text time="6"> Now the Piraka have journeyed to Voya Nui in search of the mask … and Mata Nui help anyone who gets in their way.</text>
+	</slide>
+</intro>

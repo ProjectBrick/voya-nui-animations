@@ -1,0 +1,35 @@
+﻿<!--
+Intro episode 05
+time : time between each slide
+soundOffset : time between each sound
+-->
+<intro time="1" soundOffset="9">
+	<!-- -->
+	<slide>
+		<!--  -->
+		<text time="5">
+Alerted to the presence
+of the evil Piraka in the caves,
+		</text>
+		<text time="4">
+the Toa Inika prepare for battle!
+		</text>
+	</slide>
+	<slide>
+		<text time="4">
+With their elemental and lightning powers,
+Toa weapons,
+		</text>
+		<text time="3">
+and Masks of Power...
+		</text>
+	</slide>
+	<slide>
+		<text time="5">
+It would seem they are ready for anything
+		</text>
+		<text time="4">
+– but can anything prepare them for the Piraka?
+		</text>
+	</slide>
+</intro>

@@ -1,0 +1,10 @@
+﻿&loading=Loading&
+&skipintro=Skip&
+&skip=skip&
+&retry=retry&
+&controls=Controls:&
+&start=start&
+&game1_help=Surf to the end of the tunnel!%0DBe careful of the ice posts!&
+&game2_help=Use the right key at the right moment%0Dto be stronger than the mechanism!&
+&continue=To be continued...&
+&playagain=Play again&

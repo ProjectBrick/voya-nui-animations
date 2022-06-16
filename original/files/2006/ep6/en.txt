@@ -1,0 +1,11 @@
+﻿&loading=Loading&
+&skipintro=Skip&
+&skip=skip&
+&retry=retry&
+&controls=Controls:&
+&start=start&
+&playagain=Play again&
+&game_help=You must find the key to continue to the Mask of Life!%0DUse the right Toa against the right Piraka to be sure to defeat them!&
+&next=next&
+&strength=strength&
+&weakness=weakness&
