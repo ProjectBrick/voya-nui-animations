@@ -1,0 +1,10 @@
+﻿<system>
+	<version type="String">1.1.0</version>
+	<mainPath type="String"></mainPath>
+	<netDebug type="Boolean">false</netDebug>
+	<language type="String"></language>
+	<cheat type="Boolean">false</cheat>
+	<quality type="String">HIGH</quality>
+	<fps type="Boolean">false</fps>
+	<urlScenes type="String">scenes/</urlScenes>
+</system>

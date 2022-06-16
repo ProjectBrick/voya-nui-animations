@@ -1,0 +1,10 @@
+﻿&loading=Loading&
+&skipintro=Skip&
+&skip=skip&
+&retry=retry&
+&controls=Controls:&
+&start=start&
+&game1_help=Climb to the top of the wall as quikly as possible!%0DAvoid the wounding chains!&
+&game2_help=Cross the lake protected by Toa Hahli!%0DUse the guide shown here to navigate a safe path.&
+&continue=To be continued...&
+&playagain=Play again&

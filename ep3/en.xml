@@ -1,0 +1,30 @@
+﻿<!--
+Intro episode 03
+time : time between each slide
+soundOffset : time between each sound
+-->
+<intro time="1" soundOffset="9">
+	<!-- -->
+	<slide>
+		<!--  -->
+		<text time="4">
+While searching for the Mask of Life
+on Voya Nui,
+		</text>
+		<text time="4">
+the Piraka discover a mysterious cavern.
+		</text>
+	</slide>
+	<slide>
+		<text time="4">
+Their journey reveals it
+to be rigged with tricks and traps
+		</text>
+	</slide>
+	<slide>
+		<text time="4">
+- but can any trap hold the powerful,
+evil Piraka for long?
+		</text>
+	</slide>
+</intro>

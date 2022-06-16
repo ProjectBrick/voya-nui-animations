@@ -1,0 +1,11 @@
+﻿<system>
+	<version type="String">1.1.0</version>
+	<mainPath type="String"></mainPath>
+	<netDebug type="Boolean">false</netDebug>
+	<language type="String">en</language>
+	<languages type="Array">en,fr,de</languages>
+	<cheat type="Boolean">false</cheat>
+	<quality type="String">HIGH</quality>
+	<fps type="Boolean">false</fps>
+	<serverGet type="Boolean">false</serverGet>
+</system>

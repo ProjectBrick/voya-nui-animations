@@ -1,0 +1,4 @@
+﻿&loading=Loading&
+&skipintro=Skip&
+&skip=Skip&
+&continue=to be continued...&

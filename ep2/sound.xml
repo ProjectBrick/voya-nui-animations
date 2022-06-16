@@ -1,0 +1,17 @@
+<sounds genvol="100" fxvol="100" musicvol="100" >
+	<file id="main" hifi="sound.swf" lofi="">
+		<music>
+			<_coeur volume='100' />
+			<_conclujeu1 volume='50' />
+			<_conclujeu2 volume='100' />
+			<_mixjeu_01 volume='50' />
+			<_mixjeu_02 volume='50' />
+		</music>
+		<fx>
+			<_balancier volume='75' />
+			<_chaine-01 volume='75' />
+			<_jump volume='100' />
+			<_tremblement_rocher volume='100' />
+		</fx>
+	</file>
+</sounds>
