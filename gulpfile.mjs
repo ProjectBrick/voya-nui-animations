@@ -16,9 +16,16 @@ import {
 } from '@shockpkg/swf-projector';
 
 import {
-	filename,
-	slugify
-} from './util/string.mjs';
+	appName,
+	appDomain,
+	version,
+	author,
+	copyright,
+	appFile,
+	appDmgTitle,
+	versionShort,
+	distName
+} from './util/meta.mjs';
 import {
 	imageSize,
 	pngs2bmps,
@@ -32,17 +39,6 @@ import {
 	makeExe,
 	makeDmg
 } from './util/dist.mjs';
-
-const {
-	appName,
-	appDomain,
-	version,
-	author,
-	copyright
-} = await fse.readJSON('./package.json');
-
-const distName = slugify(`${appName}-${version}`);
-const versionShort = version.split('.').slice(0, 2).join('.');
 
 async function * files() {
 	const reg = /^[^.]+\.(swf|xml|txt)$/i;
@@ -113,7 +109,7 @@ gulp.task('build:browser', async () => {
 	await fse.remove(dest);
 	await browser(`${dest}/data`);
 	await fse.outputFile(
-		`${dest}/${filename(appName)}.html`,
+		`${dest}/${appFile}.html`,
 		'<meta http-equiv="refresh" content="0;url=data/index.html">\n'
 	);
 	await docs('docs', dest);
@@ -122,9 +118,7 @@ gulp.task('build:browser', async () => {
 gulp.task('build:windows', async () => {
 	const dest = 'build/windows';
 	await fse.remove(dest);
-
-	const name = filename(appName);
-	const file = `${name}.exe`;
+	const file = `${appFile}.exe`;
 	const b = new BundleWindows32(`${dest}/${file}`);
 	b.projector.versionStrings = {
 		FileVersion: version,
@@ -135,13 +129,12 @@ gulp.task('build:windows', async () => {
 		ProductName: appName,
 		LegalTrademarks: '',
 		OriginalFilename: file,
-		InternalName: name,
+		InternalName: appFile,
 		Comments: ''
 	};
 	b.projector.iconData = await readIco('res/app-icon-windows');
 	b.projector.patchWindowTitle = appName;
 	b.projector.removeCodeSignature = true;
-
 	await bundle(b, 'flash-player-32.0.0.465-windows-sa-debug');
 	await docs('docs', dest);
 });
@@ -151,12 +144,11 @@ gulp.task('build:mac', async () => {
 	// Debug projectors do not have this performance issue.
 	const dest = 'build/mac';
 	await fse.remove(dest);
-
 	const pkgInfo = 'APPL????';
-	const b = new BundleMacApp(`${dest}/${filename(appName)}.app`);
-	b.projector.binaryName = filename(appName);
+	const b = new BundleMacApp(`${dest}/${appFile}.app`);
+	b.projector.binaryName = appFile;
 	b.projector.pkgInfoData = pkgInfo;
-	b.projector.infoPlistDocument = new Plist(new ValueDict(new Map([
+	b.projector.infoPlistData = (new Plist(new ValueDict(new Map([
 		['CFBundleInfoDictionaryVersion', new ValueString('6.0')],
 		['CFBundleDevelopmentRegion', new ValueString('en-US')],
 		['CFBundleExecutable', new ValueString('')],
@@ -180,12 +172,11 @@ gulp.task('build:mac', async () => {
 		['NSAppleScriptEnabled', new ValueString('YES')],
 		['NSMainNibFile', new ValueString('MainMenu')],
 		['NSPrincipalClass', new ValueString('NSApplication')]
-	])));
+	])))).toXml();
 	b.projector.iconData = await readIcns('res/app-icon-mac.iconset');
 	b.projector.patchWindowTitle = appName;
 	b.projector.removeInfoPlistStrings = true;
 	b.projector.removeCodeSignature = true;
-
 	await bundle(b, 'flash-player-32.0.0.465-mac-sa-debug-zip');
 	await docs('docs', dest);
 });
@@ -193,11 +184,9 @@ gulp.task('build:mac', async () => {
 gulp.task('build:linux-i386', async () => {
 	const dest = 'build/linux-i386';
 	await fse.remove(dest);
-
-	const b = new BundleLinux32(`${dest}/${filename(appName)}`);
+	const b = new BundleLinux32(`${dest}/${appFile}`);
 	b.projector.patchProjectorPath = true;
 	b.projector.patchWindowTitle = appName;
-
 	await bundle(b, 'flash-player-11.2.202.644-linux-i386-sa-debug', true);
 	await docs('docs', dest);
 });
@@ -205,12 +194,10 @@ gulp.task('build:linux-i386', async () => {
 gulp.task('build:linux-x86_64', async () => {
 	const dest = 'build/linux-x86_64';
 	await fse.remove(dest);
-
-	const b = new BundleLinux64(`${dest}/${filename(appName)}`);
+	const b = new BundleLinux64(`${dest}/${appFile}`);
 	b.projector.patchProjectorPath = true;
 	b.projector.patchProjectorOffset = true;
 	b.projector.patchWindowTitle = appName;
-
 	await bundle(b, 'flash-player-32.0.0.465-linux-x86_64-sa-debug', true);
 	await docs('docs', dest);
 });
@@ -245,7 +232,7 @@ gulp.task('dist:windows:exe', async () => {
 	await makeExe('innosetup.iss', {
 		VarId: appDomain,
 		VarName: appName,
-		VarNameFile: filename(appName),
+		VarNameFile: appFile,
 		VarVersion: version,
 		VarPublisher: author,
 		VarCopyright: copyright,
@@ -254,13 +241,13 @@ gulp.task('dist:windows:exe', async () => {
 		VarWizardImageHeader: `${resHeaders}/*.bmp`,
 		VarWizardImageSidebar: `${resSidebars}/*.bmp`,
 		VarWizardImageAlphaFormat: 'none',
-		VarExeName: `${filename(appName)}.exe`,
+		VarExeName: `${appFile}.exe`,
 		VarOutDir: outDir,
 		VarOutFile: outFile,
 		VarSource: 'build/windows/*',
 		VarArchitecturesInstallIn64BitMode: '',
 		VarArchitecturesAllowed: '',
-		VarReadMeName: `${filename(appName)} - README`,
+		VarReadMeName: `${appFile} - README`,
 		VarReadMeFile: 'README.html'
 	});
 	await fse.remove(res);
@@ -278,7 +265,7 @@ gulp.task('dist:mac:dmg', async () => {
 	await fse.outputFile(icon, await readIcns('res/dmg-icon.iconset'));
 	await makeDmg(output, {
 		format: 'UDBZ',
-		title: filename(appName),
+		title: appDmgTitle,
 		'icon-size': 128,
 		icon,
 		background,
@@ -293,7 +280,7 @@ gulp.task('dist:mac:dmg', async () => {
 				x: (width / 2) - 160,
 				y: 108,
 				type: 'file',
-				path: `build/mac/${filename(appName)}.app`
+				path: `build/mac/${appFile}.app`
 			},
 			{
 				x: (width / 2) + 160,
