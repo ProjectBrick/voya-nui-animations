@@ -2,7 +2,7 @@
 	"private": true,
 	"appName": "Voya Nui Animations",
 	"appDomain": "io.github.projectbrick.VoyaNuiAnimations",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"author": "Project Brick",
 	"copyright": "Copyright 2006 The LEGO Group, Yamago, and 4.21 Productions. Unofficial release by Project Brick.",
 	"optionalDependencies": {
