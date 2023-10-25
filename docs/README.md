@@ -1,4 +1,4 @@
-# Voya Nui Animations -- README
+# Voya Nui Animations – README
 
 Delve deeper into the world of BIONICLE with the newest, coolest animations about Voya Nui and the search for the Mask of Life!
 
